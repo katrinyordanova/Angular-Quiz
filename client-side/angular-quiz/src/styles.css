@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+You can add global styles to this file, and also import other style files
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +10,8 @@
 
 html {
     box-sizing: border-box;
-    font: 18px/1.5 Georgia, serif;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font: 18px/1.5 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    height: 100%;
 }
 
 body, button {
