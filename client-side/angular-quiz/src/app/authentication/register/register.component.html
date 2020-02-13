@@ -11,24 +11,32 @@
                     </div>
                 </div>
                 <div class="card-content">
-                    <form>
+                    <form #registerForm="ngForm" (ngSubmit)="registerHandler(name.value, password.value)">
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">account_circle</i>
-                                <input type="text" name="Name" #Name ngModel required>
+                                <input #nameInput="ngModel" type="text" name="name" #name ngModel required minlength="6">
                                 <label>Name</label>
+                                <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)">
+                                    <div class="card-panel teal lighten-3" *ngIf="nameInput.errors?.required">Please enter name</div>
+                                    <div class="card-panel teal lighten-3" *ngIf="nameInput.errors?.minlength">Name must be at least 6 characters long</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">fingerprint</i>
-                                <input type="password" name="Password" #Password ngModel required>
+                                <input #passwordInput="ngModel" type="password" name="password" #password ngModel required minlength="6" >
                                 <label>Password</label>
+                                <div *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)">
+                                    <div class="card-panel teal lighten-3" *ngIf="passwordInput.errors?.required">Please enter password</div>
+                                    <div class="card-panel teal lighten-3" *ngIf="passwordInput.errors?.minlength">Password must be at least 6 characters long</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <button class="btn-large btn-submit" type="submit">Submit</button>
+                                <button class="btn-large btn-submit" type="submit" [disabled]="registerForm.invalid">Submit</button>
                             </div>
                         </div>
                     </form>
