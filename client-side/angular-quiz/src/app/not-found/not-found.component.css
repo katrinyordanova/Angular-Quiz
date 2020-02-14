@@ -1,0 +1,17 @@
+img, p {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    margin: 2em auto;
+    width: 35em;
+    height: 25em;
+    align-items: center;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 0;
+}
