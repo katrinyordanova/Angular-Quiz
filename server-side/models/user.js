@@ -3,7 +3,7 @@ const bcryptjs = require('bcryptjs');
 const saltRounds = 10;
 
 const userSchema = new mongoose.Schema({
-    username: {
+    name: {
         type: String
     },
     password: {
