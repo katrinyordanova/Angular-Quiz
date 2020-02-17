@@ -1,0 +1,25 @@
+/* in shared/forms */
+.container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+div.card {
+    display: flex;
+    justify-content: center;
+    margin: 1.1em 0 0 -5em;
+    width: 38em;
+}
+
+.col .s6:first-child {
+    margin-left: 1em;
+    margin-top: -0.5em
+}
+
+img {
+    margin-top: 0.5em;
+    margin-right: -10em;
+    width: 15em;
+    height: auto;
+}

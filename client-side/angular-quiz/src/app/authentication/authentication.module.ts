@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 import { AuthenticationRoutingModule } from './authentication-routing.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [RegisterComponent],
+  declarations: [RegisterComponent, LoginComponent],
   imports: [
     CommonModule,
     FormsModule,

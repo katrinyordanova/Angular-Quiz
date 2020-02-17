@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['../../shared/forms/style.css']
 })
 export class RegisterComponent {
 
@@ -16,7 +16,7 @@ export class RegisterComponent {
     this.userService.register(name, password).subscribe((data: any) => {
       localStorage.clear();
       localStorage.setItem('user', JSON.stringify(data));
-      this.route.navigate(['/home']);
+      this.route.navigate(['']);
     });
   }
 }

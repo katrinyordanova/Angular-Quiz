@@ -8,11 +8,15 @@ import { HttpClient } from '@angular/common/http';
 export class UserService {
 
   user: IUser;
-    constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-    register(name: string, password: string) {
-        const body = { name: name, password: password };
-        console.log(body);
-        return this.http.post<IUser>('http://localhost:8888/api/user/register', body);
-    }
+  register(name: string, password: string) {
+    const body = { name: name, password: password };
+    return this.http.post<IUser>('http://localhost:8888/api/user/register', body);
+  }
+
+  login(name: string, password: string) {
+    const body = { name: name, password: password };
+    return this.http.post<IUser>('http://localhost:8888/api/user/login', body);
+  }
 }
