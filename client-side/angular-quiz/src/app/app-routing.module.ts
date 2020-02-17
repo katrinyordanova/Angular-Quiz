@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { RegisterComponent } from './authentication/register/register.component';
+import { GuestComponent } from './guest/guest/guest.component';
 
 
 const routes: Routes = [
-  { path: '', component: RegisterComponent },
+  { path: '', pathMatch: 'full', component: GuestComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { GuestRoutingModule }

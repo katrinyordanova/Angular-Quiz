@@ -1,0 +1,25 @@
+.container {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+h1 {
+    font-size: 29px;
+}
+
+s {
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+.buttons {
+    margin-top: 3.5em; 
+}
+
+.buttons:first-child {
+    color: #000;
+    margin: 20em;
+}

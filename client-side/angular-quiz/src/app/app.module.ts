@@ -9,6 +9,7 @@ import { CoreModule } from './core/core.module';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { UserModule } from './user/user.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { GuestModule } from './guest/guest.module';
 
 @NgModule({
   declarations: [
@@ -20,10 +21,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FormsModule,
     RouterModule,
     HttpClientModule,
-    AppRoutingModule,
     CoreModule,
+    UserModule,
+    GuestModule,
     AuthenticationModule,
-    UserModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
