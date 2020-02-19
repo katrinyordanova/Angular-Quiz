@@ -13,8 +13,7 @@ export class LoginComponent {
               private route: Router) { }
 
   loginHandler(name: string, password: string) {
-    this.userService.login(name, password).subscribe(() => {
-      this.route.navigate(['']);
-    });
+    this.userService.login(name, password);
+    this.route.navigate(['home']);
   }
 }

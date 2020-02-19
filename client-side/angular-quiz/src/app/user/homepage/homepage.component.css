@@ -1,0 +1,21 @@
+.container {
+    margin-right: 0em;
+}
+
+.waves-effect, .material-icon {
+    color: white
+}
+
+.waves-effect:not, .material-icon:not, h3:not {
+    font-size: 20px;
+}
+
+.container .row {
+    margin-top: 1em;
+}
+
+.collection {
+    margin-top: -1em;
+    margin-left: -2em;
+    border: 1px solid white;
+}

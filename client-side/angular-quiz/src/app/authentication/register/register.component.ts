@@ -15,8 +15,8 @@ export class RegisterComponent {
   registerHandler(name: string, password: string) {
     this.userService.register(name, password).subscribe((data: any) => {
       localStorage.clear();
-      localStorage.setItem('user', JSON.stringify(data));
-      this.route.navigate(['']);
+      localStorage.setItem('current-user', JSON.stringify(data));
+      this.route.navigate(['home']);
     });
   }
 }
