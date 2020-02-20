@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IUser } from '../shared/interfaces/user';
 import { HttpClient } from '@angular/common/http';
-import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +22,7 @@ export class UserService {
   register(name: string, password: string) {
     localStorage.setItem('current-user', JSON.stringify({ name, password }));
     this.currentUser = { name, password };
-    const body = { name: name, password: password };
+    const body = { name: name, password: password, score: 0, timeSpent: 0 };
     return this.http.post<IUser>('http://localhost:8888/api/user/register', body);
   }
 

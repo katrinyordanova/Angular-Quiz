@@ -1,5 +1,15 @@
 .container {
+
+    margin-bottom: 0;
     margin-right: 0em;
+}
+
+h3 {
+    margin-top: 0.5em;
+}
+
+a {
+    margin-top: -1em;
 }
 
 .waves-effect, .material-icon {
@@ -11,7 +21,7 @@
 }
 
 .container .row {
-    margin-top: 1em;
+    margin-top: 0;
 }
 
 .collection {
