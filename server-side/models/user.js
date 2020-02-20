@@ -9,7 +9,12 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String
     },
-    // takenQuizzes: [{ type: mongoose.Types.ObjectId, ref: 'TakenQuizzes'}]
+    score: {
+        type: Number
+    },
+    timeSpent: {
+        type: Number
+    }
 });
 
 userSchema.methods = {

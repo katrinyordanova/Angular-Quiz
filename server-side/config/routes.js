@@ -2,6 +2,6 @@ const router = require('../routes/')
 
 module.exports = (app) => {
     app.use('/api/user', router.user);
-    // app.use('/api/post', router.post);
+    app.use('/api/quiz', router.quiz);
     app.get('*', (req, res) => { res.send('<h1>Something went wrong</h1>');});
 }

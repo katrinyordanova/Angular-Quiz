@@ -5,14 +5,14 @@ const utilities = require('../utilities');
 module.exports = {
 	post: {
         register: (req, res, next) => {
-            const { name, password } = req.body;
+            const { name, password, score, timeSpent } = req.body;
             models.user.findOne({ name }).then((user) => {
                 if(user === name) {
                     res.status(401).send('User already exists');
                     return;
                 }
             });
-            models.user.create({ name, password })
+            models.user.create({ name, password, score, timeSpent })
                 .then((createdUser) => res.send(createdUser))
                 .catch(next);
         },
