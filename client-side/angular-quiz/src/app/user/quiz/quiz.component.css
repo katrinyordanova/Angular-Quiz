@@ -1,3 +1,16 @@
+.col {
+    margin: 3.5em;
+}
+
+span {
+    font-size: 21px;
+    font-weight: normal;
+}
+
+div.progress {
+    margin: 1em auto 2em auto;
+}
+
 li {
     color: black;
 }

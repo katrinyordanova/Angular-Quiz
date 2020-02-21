@@ -18,6 +18,6 @@ export class QuizService {
     constructor(private http: HttpClient) {}
 
     getQuestions() {
-       return this.http.get<IQuiz>('http://localhost:8888/api/quiz', { responseType: 'text' });
+       return this.http.get('http://localhost:8888/api/quiz', { responseType: 'text'});
     }
 }
