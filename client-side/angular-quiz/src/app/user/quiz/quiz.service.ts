@@ -24,7 +24,7 @@ export class QuizService {
     }
 
     getQuiz() {
-       return this.http.get('http://localhost:8888/api/quiz/', { responseType: 'text'});
+       return this.http.get('http://localhost:8888/api/questions/questions', { responseType: 'text'});
     }
 
     getRightAnswers() {

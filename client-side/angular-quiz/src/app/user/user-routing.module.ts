@@ -7,17 +7,19 @@ import { ResultComponent } from './result/result.component';
 const routes: Routes = [
     {
         path: 'home',
-        component: HomepageComponent
-        // canActivate: [AuthGuard],
-        // data: { isLogged: true },
+        component: HomepageComponent,
+        canActivate: [AuthGuard],
     },
     {
         path: 'quiz',
-        component: QuizComponent
+        component: QuizComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'result',
-        component: ResultComponent
+        component: ResultComponent,
+        canActivate: [AuthGuard]
+
     }
 ]
 

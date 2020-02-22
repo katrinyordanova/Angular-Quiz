@@ -10,6 +10,7 @@ import { AuthenticationModule } from './authentication/authentication.module';
 import { UserModule } from './user/user.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { GuestModule } from './guest/guest.module';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { GuestModule } from './guest/guest.module';
     UserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

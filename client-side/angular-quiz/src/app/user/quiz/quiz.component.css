@@ -1,6 +1,9 @@
 .col {
     margin: 3.5em;
 }
+li {
+    color: black
+}
 
 span {
     font-size: 21px;
