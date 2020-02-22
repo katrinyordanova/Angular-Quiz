@@ -15,7 +15,7 @@ const optionsSchema = new mongoose.Schema({
     }
 });
 
-const quizSchema = new mongoose.Schema({
+const questionSchema = new mongoose.Schema({
     id: {
         type: String
     },
@@ -28,4 +28,4 @@ const quizSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Quiz', quizSchema);
+module.exports = mongoose.model('Question', questionSchema);

@@ -3,12 +3,20 @@ const config = require('../config/config');
 const utilities = require('../utilities');
 
 module.exports = {
+    get: {
+        allUsers(req, res, next) {
+            models.user.find()   
+            .then((user) => (res.send(user)))
+            .catch(next); 
+        }
+    },
 	post: {
         register: (req, res, next) => {
             const { name, password, score, timeSpent } = req.body;
             models.user.findOne({ name }).then((user) => {
                 if(user === name) {
                     res.status(401).send('User already exists');
+                    console.log('object');
                     return;
                 }
             });

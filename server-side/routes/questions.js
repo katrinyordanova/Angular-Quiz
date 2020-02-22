@@ -1,6 +1,6 @@
 const controllers = require('../controllers/');
 const router = require('express').Router();
 
-router.get('/info', controllers.quiz.get.many);
+router.get('/questions', controllers.questions.get.many);
 
 module.exports = router;
