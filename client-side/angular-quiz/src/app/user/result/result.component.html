@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col s8 offset-s2">
+    <h2 class="header">Completed!</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="../../../assets/images/trophy.jpg" alt="quiz-completed-trophy">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h4>{{quizService.getUsername()}}</h4>
+          <h3>{{quizService.correctAnswers}}/10</h3>
+          <span>Time Elapsed : {{quizService.elapsedTime()}}</span>
+        </div>
+        <div class="card-action">
+          <button class="btn" (click)="onSubmit()">Submit</button>
+        </div>
+      </div>
+      <a class="btn-floating halfway-fab waves-effect waves-light red" (click)="restartQuiz()">
+        <i class="material-icons">replay</i>
+      </a>
+    </div>
+  </div>
+</div>

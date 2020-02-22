@@ -10,6 +10,7 @@ export class QuizService {
     seconds: number;
     timer;
     questionProgress: number;
+    correctAnswers: number = 0;
 
     elapsedTime() {
         return Math.floor(this.seconds / 3600) + ':' + Math.floor(this.seconds / 60) + ':' + Math.floor(this.seconds % 60);
@@ -17,7 +18,24 @@ export class QuizService {
     
     constructor(private http: HttpClient) {}
 
-    getQuestions() {
-       return this.http.get('http://localhost:8888/api/quiz', { responseType: 'text'});
+    getUsername() {
+        const user = JSON.parse(localStorage.getItem('current-user'));
+        return user.name;
+    }
+
+    getQuiz() {
+       return this.http.get('http://localhost:8888/api/quiz/', { responseType: 'text'});
+    }
+
+    getRightAnswers() {
+        const body = this.questions.map(q => q.id);
+        return this.http.post('http://localhost:8888/api/answers', body)
+    }
+
+    submitScore() {
+        const data = JSON.parse(localStorage.getItem('current-user'));
+        data.score = this.correctAnswers;
+        data.timeSpent = this.seconds;
+        return this.http.post('http://localhost:8888/api/submited-score', data);
     }
 }
