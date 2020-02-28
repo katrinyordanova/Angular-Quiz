@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class QuizComponent implements OnInit {
 
   constructor(public quizService: QuizService,
-              private route: Router) { }
+              private router: Router) { }
 
   ngOnInit() {
     this.quizService.seconds = 0;
@@ -32,9 +32,9 @@ export class QuizComponent implements OnInit {
   userAnswer(id: string, choice: number) {
     this.quizService.questions[this.quizService.questionProgress].answer = choice;
     this.quizService.questionProgress++;
-    if(this.quizService.questionProgress === 13) {
+    if(this.quizService.questionProgress === 20) {
       clearInterval(this.quizService.timer);
-      this.route.navigate['/result'];
+      this.router.navigate(['/result'])
     }
   }
 

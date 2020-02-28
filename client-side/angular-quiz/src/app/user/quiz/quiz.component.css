@@ -1,5 +1,5 @@
 .col {
-    margin: 3.5em;
+    margin: 4em;
 }
 li {
     color: black
@@ -12,4 +12,17 @@ span {
 
 div.progress {
     margin: 1em auto 2em auto;
+}
+
+.card-title {
+    padding-left: 1em;
+}
+
+div.card-action {
+    padding-top: 0.5em;
+}
+
+ul.collection.answer {
+    padding-bottom: 0;
+    border: 0;
 }

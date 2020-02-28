@@ -12,15 +12,15 @@ export class ResultComponent implements OnInit {
   constructor(public quizService: QuizService, private router: Router) { }
 
   ngOnInit() {
-    this.quizService.getRightAnswers().subscribe((data: any) => {
-      this.quizService.correctAnswers = 0;
-      this.quizService.questions.forEach((element, index) => {
-        if(element.answer === data[index]) {
-          this.quizService.correctAnswers++;
-          element.correct = data[index];
-        }
-      });
-    });
+    // this.quizService.getRightAnswers().subscribe((data: any) => {
+    //   this.quizService.correctAnswers = 0;
+    //   this.quizService.questions.forEach((element, index) => {
+    //     if(element.answer === data[index]) {
+    //       this.quizService.correctAnswers++;
+    //       element.correct = data[index];
+    //     }
+    //   });
+    // });
   }
 
   onSubmit() {
