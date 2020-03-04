@@ -1,8 +1,8 @@
-<nav>
-    <div class="nav-wrapper">
-        <a class="brand-logo center">Angular Quiz</a>
-        <ul *ngIf="isLogged" id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a (click)="logout()" class="waves-effect waves-light btn">Log out</a></li>
-        </ul>
-    </div>
+<nav class="navbar-expand-sm">
+    <ul class="nav text-white">
+        <a routerLink="home" class="navbar-brand">Angular Quiz</a>
+       
+        <a *ngIf="!isLogged" (click)="logout()">Log out</a>
+        
+    </ul>
 </nav>

@@ -11,6 +11,7 @@ import { UserModule } from './user/user.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { GuestModule } from './guest/guest.module';
 import { AuthGuard } from './auth.guard';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AuthGuard } from './auth.guard';
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     FormsModule,
     RouterModule,
     HttpClientModule,

@@ -12,6 +12,8 @@ export class RegisterComponent {
   constructor(private userService: UserService,
               private route: Router) {}
   
+  loginButton: boolean = false;
+
   registerHandler(name: string, password: string) {
     this.userService.register(name, password).subscribe((data: any) => {
       localStorage.clear();

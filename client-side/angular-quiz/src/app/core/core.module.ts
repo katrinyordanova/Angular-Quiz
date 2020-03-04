@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationComponent } from './navigation/navigation.component';
-import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { AuthenticationModule } from '../authentication/authentication.module';
 
 
 
 @NgModule({
-  declarations: [NavigationComponent, FooterComponent],
+  declarations: [NavigationComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    AuthenticationModule
   ], 
   exports: [
-    NavigationComponent,
-    FooterComponent
+    NavigationComponent
   ]
 })
 export class CoreModule { }
