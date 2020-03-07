@@ -5,11 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [RegisterComponent, LoginComponent],
   imports: [
     CommonModule,
+    FontAwesomeModule,
     FormsModule,
     RouterModule,
     AuthenticationRoutingModule

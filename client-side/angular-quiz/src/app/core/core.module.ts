@@ -4,8 +4,6 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { RouterModule } from '@angular/router';
 import { AuthenticationModule } from '../authentication/authentication.module';
 
-
-
 @NgModule({
   declarations: [NavigationComponent],
   imports: [

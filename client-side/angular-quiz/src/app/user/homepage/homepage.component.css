@@ -1,31 +1,50 @@
 .container {
-
-    margin-bottom: 0;
-    margin-right: 0em;
+    margin: 1em 0 0 22em;
 }
 
-h3 {
-    margin-top: 0.5em;
+.quiz-heading {
+    padding-bottom: 0;
 }
 
-a {
-    margin-top: -1em;
+a:link {
+    text-decoration: none;
 }
 
-.waves-effect, .material-icon {
-    color: white
+a.btn {
+    margin-left: -0.1em;
+    color: rgb(252, 252, 252);
+    background-color: rgb(195, 0, 47);
 }
 
-.waves-effect:not, .material-icon:not, h3:not {
-    font-size: 20px;
+a.btn:hover {
+    color: rgb(195, 0, 47);
+    border: 1px solid rgb(195, 0, 47);
+    background-color: rgb(252, 252, 252);
 }
 
-.container .row {
-    margin-top: 0;
+.start-icon {
+    float: right;
+    padding-left: 0.5em;
 }
 
-.collection {
-    margin-top: -1em;
-    margin-left: -2em;
-    border: 1px solid white;
+.container h3:nth-child(3) {
+    margin-top: 0.4em;
+    padding-bottom: 0;
+}
+
+ul {
+    width: 38em;
+}
+
+li {
+    padding-left: 0;
+}
+
+.list-group-item-danger {
+    color: rgb(195, 0, 47);
+    background-color: rgb(252, 252, 252);
+}
+
+ul a {
+    color: rgb(195, 0, 47);
 }

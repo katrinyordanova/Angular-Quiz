@@ -1,63 +1,54 @@
 .container {
+    width: 30em;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 10px;
+}
+
+.header {
     display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-left: 10em;
-    height: auto;
 }
 
-.card {
-    margin-top: 1.1em;
+.header h2 {
+    margin-top: 6.2em;
 }
 
-.row {
-    margin-top: 0.55em; 
-    margin-bottom: 0;
+.icons {
+    font-size: 30px;
+    padding-top: 0.08em;
+    margin: 0 0 0 1.5em;
 }
 
-.card > .container {
-    margin: 0;
+label {
+    margin-left: 4em;
+    font-weight: bold;
 }
 
-h2 {
-    display: flex;
-    margin-top: 2.4em;
-    margin-bottom: 0;
-    padding-bottom: 0;
+.btn.btn-dark.btn-md {
+    margin-left: 5.5em;
+    padding: 0.2em 0;
+    width: 50%;
+    font-size: 24px;
 }
 
-.col .s6:first-child {
-    text-align: left;
+button:disabled{
+    color: #000;
+    cursor: default;
 }
 
-img {
-    margin-top: 0.7em;
-    width: 27em;
-    height: auto;
-}
-
-.card-panel {
-    padding: 0.5em;
-    margin: 0.3em;
-    color: white;
+input {
+    cursor: text;
 }
 
 input.ng-invalid.ng-dirty{
-    border-bottom-color : #e91e63 !important;
-    box-shadow: 0 1px 0 0 #e91e63 !important;
+    border-color : #e91e1e !important;
+    box-shadow: 0 1px 0 0 #e91e1e !important;
 }
 
-button.btn-submit{
-    width: 100%;
-}
-
-ul.answer li:hover{
-    background-color: #26a69a;
-    color: #eafaf9;
-    cursor: pointer;
-}
-
-ul li.selected{
-    background-color: #26a69a !important;
-    color: #eafaf9 !important;
+.validation-text {
+    border: 1px solid #e91e1e;
+    border-radius: 5px;
+    background-color: #e93d3d;
+    color: rgb(255, 255, 255);
+    padding: 0.2em 0.3em;
+    margin-left: 4.8em;
 }

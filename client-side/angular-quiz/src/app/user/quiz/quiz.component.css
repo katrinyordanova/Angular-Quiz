@@ -1,28 +1,33 @@
-.col {
-    margin: 4em;
-}
-li {
-    color: black
+.container {
+    margin: 5em auto;
+    width: 47em
 }
 
-span {
-    font-size: 21px;
-    font-weight: normal;
+.elapsed-time {
+    color: rgb(87, 84, 84);
+    font-size: 22px;
+    font-weight: bold;
 }
 
-div.progress {
-    margin: 1em auto 2em auto;
+.progress {
+    margin: 1em 0;
 }
 
-.card-title {
-    padding-left: 1em;
+.list-group-item-action {
+    background-color: rgb(195, 0, 47);
+    color: rgb(255, 255, 255)
 }
 
-div.card-action {
-    padding-top: 0.5em;
+.list-group-item-danger {
+    background-color: rgb(255, 255, 255);
 }
 
-ul.collection.answer {
-    padding-bottom: 0;
-    border: 0;
+.list-group-item-danger:hover {
+    background-color: rgb(195, 0, 47);
+    color: rgb(255, 255, 255);
+}
+
+fa-icon {
+    color: rgb(182, 68, 68);
+    padding-right: 0.5em;
 }

@@ -1,26 +1,23 @@
-<div class="row" *ngIf="quizService.questions && this.quizService.questionProgress !== 20">
-  <div class="col s8 offset-s2">
-  <span>Time Elapsed: {{quizService.elapsedTime()}}</span>
-    <div class="progress">
-      <div class="determinate" [style.width.%]="(quizService.questionProgress+1)*5"></div>
-    </div>
-    <div class="card blue-grey">
-      <div class="card-content white-text">
-        <span class="card-title">{{quizService.questionProgress+1}}. {{quizService.questions[quizService.questionProgress].question}}</span>
-        <div class="card-action">
-          <ul class="collection answer">
-            <ng-container *ngFor="let option of this.quizService.questions[this.quizService.questionProgress].options;let i = index">
-              <li  class="collection-item"
-                (click)="userAnswer(quizService.questions[quizService.questionProgress].id,i)">
-                {{option.firstOption}}
-                {{option.secondOption}}
-                {{option.thirdOption}}
-                {{option.fourthOption}}
-              </li>
-            </ng-container>
-          </ul>
-        </div>
-      </div>
-    </div>
+<div class="container" *ngIf="quizService.questions && this.quizService.questionProgress !== 20">
+  <span class="elapsed-time">Time Elapsed: {{quizService.elapsedTime()}}</span>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" [style.width.%]="progress" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
+  <div class="list-group">
+    <span class="list-group-item list-group-item-action">{{quizService.questionProgress+1}}.
+      {{quizService.questions[quizService.questionProgress].question}}</span>
+  </div>
+  <ul class="list-group">
+    <ng-container
+      *ngFor="let option of this.quizService.questions[this.quizService.questionProgress].options;let i = index">
+      <li class="list-group-item list-group-item-danger"
+        (click)="userAnswer(quizService.questions[quizService.questionProgress].id,i)">
+        <fa-icon [icon]="faQuestion"></fa-icon>
+        {{option.firstOption}}
+        {{option.secondOption}}
+        {{option.thirdOption}}
+        {{option.fourthOption}}
+      </li>
+    </ng-container>
+  </ul>
 </div>

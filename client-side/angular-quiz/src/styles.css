@@ -1,7 +1,8 @@
-You can add global styles to this file, and also import other style files
+/* You can add global styles to this file, and also import other style files */
 * {
     margin: 0;
     padding: 0;
+    cursor: default;
 }
 
 *, *:before, *:after {
@@ -46,4 +47,9 @@ ul, ol {
 
 li {
     list-style-position: inside;
+}
+
+li, a {
+    cursor: pointer;
+
 }

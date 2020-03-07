@@ -1,1 +1,26 @@
-/* in shared/forms */
+.container {
+    margin: 1.35em auto;
+}
+
+.header h2 {
+    width: 5em;
+    margin-top: 3.8em;
+}
+
+img {
+    margin-top: 1em;
+    margin-left: -4em;
+    width: 20em;
+    height: 100%;
+}
+
+ul.answer li:hover{
+    background-color: #26a69a;
+    color: #eafaf9;
+    cursor: pointer;
+}
+
+ul li.selected{
+    background-color: #26a69a !important;
+    color: #eafaf9 !important;
+}

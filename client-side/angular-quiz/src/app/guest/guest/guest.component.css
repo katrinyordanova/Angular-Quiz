@@ -1,25 +1,27 @@
-.container {
+ .container {
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 6rem;
 }
 
 h1 {
     font-size: 29px;
 }
 
-s {
-    color: white;
+.guest-buttons {
+    margin-top: 3em
 }
 
-a {
-    color: white;
+.register-button,
+.login-button {
+    color: rgb(255, 255, 255);
+    background-color:  rgb(195, 0, 47);
 }
 
-.buttons {
-    margin-top: 3.5em; 
+.register-button:hover,
+.login-button:hover {
+    color: rgb(255, 255, 255);
 }
 
-.buttons:first-child {
-    color: #000;
-    margin: 20em;
+.register-button {
+    margin-right: 1.8em;
 }

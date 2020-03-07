@@ -1,8 +1,9 @@
-<nav class="navbar-expand-sm">
-    <ul class="nav text-white">
-        <a routerLink="home" class="navbar-brand">Angular Quiz</a>
-       
-        <a *ngIf="!isLogged" (click)="logout()">Log out</a>
-        
-    </ul>
+<nav>
+    <ul ngbNav class="navbar">
+        <span class="navbar-brand">Angular Quiz</span>
+        <li *ngIf="isLogged" class="nav-buttons">
+            <a (click)="home()" class="home-button btn btn-outline">Home</a> 
+            <a (click)="logout()" class="logout-button btn btn-outline">Log out</a> 
+        </li>
+      </ul>
 </nav>

@@ -1,21 +1,15 @@
 <div class="container">
-    <div class="col">
-        <div class="col s8 offset-s12">
-            <h3>Are you ready to start the test?</h3>
-            <a routerLink="/quiz" class="waves-effect waves-light btn"><i class="material-icons right">play_arrow</i>Start</a>
-            <div class="container row">
-                <h3>Not confident enough or want to learn more?</h3>
-                <div class="collection">
-                    <a class="collection-item" href="https://angular.io/" target="blank" rel="noopener noreferrer"><i class="material-icons left">attach_file</i>Angular Documentation</a>
-                    <a class="collection-item" href="https://medium.com/angular-in-depth/the-best-way-to-unsubscribe-rxjs-observable-in-the-angular-applications-d8f9aa42f6a0" target="blank" rel="noopener noreferrer"><i class="material-icons left">attach_file</i>The Best Way To Unsubscribe RxJS Observables In The Angular Applications!</a>
-                    <a class="collection-item" href="https://medium.com/angular-in-depth/top-10-ways-to-use-interceptors-in-angular-db450f8a62d6" target="blank" rel="noopener noreferrer"><i class="material-icons left">attach_file</i>Top 10 ways to use Interceptors in Angular</a>
-                    <a class="collection-item" href="https://medium.com/angular-in-depth/optimize-angular-bundle-size-in-4-steps-4a3b3737bf45" target="blank" rel="noopener noreferrer"><i class="material-icons left">attach_file</i>Optimize Angular bundle size in 4 steps</a>
-                    <a class="collection-item" href="https://indepth.dev/how-to-start-flying-with-angular-and-ngrx/" target="blank" rel="noopener noreferrer"><i class="material-icons left">attach_file</i>How to Start Flying with Angular and NgRx</a>
-                    <a class="collection-item" href="https://indepth.dev/angular-revisited-tree-shakable-components-and-optional-ngmodules/" target="blank" rel="noopener noreferrer"><i class="material-icons left">attach_file</i>Angular revisited: Tree-shakable components and optional NgModules</a>
-                    <a class="collection-item" href="https://indepth.dev/asynchronous-modules-and-components-in-angular-ivy/" target="blank" rel="noopener noreferrer"><i class="material-icons left">attach_file</i>Asynchronous modules and components in Angular Ivy</a>
-                    <a class="collection-item" href="https://medium.com/angular-in-depth/how-to-rxjs-in-angular-1037908e82a5" target="blank" rel="noopener noreferrer"><i class="material-icons left">attach_file</i>How to RxJS in Angular</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h3 class="quiz-heading">Are you ready to start the test?</h3>
+    <a routerLink="/quiz" class="btn btn-outline"><fa-icon class="start-icon" [icon]="faHelicopter"></fa-icon>Start</a>
+    <h3>Not confident enough or want to learn more?</h3>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-action list-group-item-danger"><a class="collection-item" href="https://angular.io/" target="blank" rel="noopener noreferrer"><fa-icon class="start-icon" [icon]="faPaperPlane"></fa-icon>Angular Documentation</a></li>
+        <li class="list-group-item list-group-item-action list-group-item-danger"><a class="collection-item" href="https://medium.com/angular-in-depth/the-best-way-to-unsubscribe-rxjs-observable-in-the-angular-applications-d8f9aa42f6a0" target="blank" rel="noopener noreferrer"><fa-icon class="start-icon" [icon]="faPaperPlane"></fa-icon>The Best Way To Unsubscribe RxJS Observables In The Angular Applications!</a></li>
+        <li class="list-group-item list-group-item-action list-group-item-danger"><a class="collection-item" href="https://medium.com/angular-in-depth/top-10-ways-to-use-interceptors-in-angular-db450f8a62d6" target="blank" rel="noopener noreferrer"><fa-icon class="start-icon" [icon]="faPaperPlane"></fa-icon>Top 10 ways to use Interceptors in Angular</a></li>
+        <li class="list-group-item list-group-item-action list-group-item-danger"><a class="collection-item" href="https://medium.com/angular-in-depth/optimize-angular-bundle-size-in-4-steps-4a3b3737bf45" target="blank" rel="noopener noreferrer"><fa-icon class="start-icon" [icon]="faPaperPlane"></fa-icon>Optimize Angular bundle size in 4 steps</a></li>
+        <li class="list-group-item list-group-item-action list-group-item-danger"><a class="collection-item" href="https://indepth.dev/how-to-start-flying-with-angular-and-ngrx/" target="blank" rel="noopener noreferrer"><fa-icon class="start-icon" [icon]="faPaperPlane"></fa-icon>How to Start Flying with Angular and NgRx</a></li>
+        <li class="list-group-item list-group-item-action list-group-item-danger"><a class="collection-item" href="https://indepth.dev/angular-revisited-tree-shakable-components-and-optional-ngmodules/" target="blank" rel="noopener noreferrer"><fa-icon class="start-icon" [icon]="faPaperPlane"></fa-icon>Angular revisited: Tree-shakable components and optional NgModules</a></li>
+        <li class="list-group-item list-group-item-action list-group-item-danger"><a class="collection-item" href="https://indepth.dev/asynchronous-modules-and-components-in-angular-ivy/" target="blank" rel="noopener noreferrer"><fa-icon class="start-icon" [icon]="faPaperPlane"></fa-icon>Asynchronous modules and components in Angular Ivy</a></li>
+        <li class="list-group-item list-group-item-action list-group-item-danger"><a class="collection-item" href="https://medium.com/angular-in-depth/how-to-rxjs-in-angular-1037908e82a5" target="blank" rel="noopener noreferrer"><fa-icon class="start-icon" [icon]="faPaperPlane"></fa-icon>How to RxJS in Angular</a></li>
+    </ul>
 </div>

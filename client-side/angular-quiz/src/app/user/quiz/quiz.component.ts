@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from './quiz.service';
 import { Router } from '@angular/router';
-
+import { faQuestion } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-quiz',
@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+
+  faQuestion = faQuestion;
+  progress: number = 5;
 
   constructor(public quizService: QuizService,
               private router: Router) { }
@@ -32,6 +35,7 @@ export class QuizComponent implements OnInit {
   userAnswer(id: string, choice: number) {
     this.quizService.questions[this.quizService.questionProgress].answer = choice;
     this.quizService.questionProgress++;
+    this.progress += 5;
     if(this.quizService.questionProgress === 20) {
       clearInterval(this.quizService.timer);
       this.router.navigate(['/result'])

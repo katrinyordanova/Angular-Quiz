@@ -1,3 +1,5 @@
-<img src="../../assets/images/owl-not-found.png" alt="owl-not-found">
-<p>Sorry about that 🦉 Try another url</p>
-<p></p>
+<div class="container">
+    <img src="../../assets/images/owl-not-found.png" alt="owl-not-found">
+    <a *ngIf="!isLogged" class="btn btn" routerLink="/">Home</a>
+    <a *ngIf="isLogged" class="btn" routerLink="/home">Home</a>
+</div>

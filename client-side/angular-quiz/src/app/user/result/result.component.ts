@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../quiz/quiz.service';
 import { Router } from '@angular/router';
+import { faUndoAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-result',
@@ -8,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
+
+  faUndoAlt = faUndoAlt;
 
   constructor(public quizService: QuizService, private router: Router) { }
 
