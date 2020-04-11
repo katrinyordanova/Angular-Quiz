@@ -33,7 +33,10 @@
                         at least 6 characters long</div>
                 </div>
             </div>
-            <button class="btn btn-dark btn-md" type="submit" [disabled]="loginForm.invalid">Submit</button>
+            <div class="buttons d-flex justify-content-center">
+                <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+                <a routerLink="/login">Register</a>
+            </div>
         </form>
     </div>
 </div>

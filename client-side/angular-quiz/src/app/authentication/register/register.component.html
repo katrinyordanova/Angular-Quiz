@@ -14,8 +14,9 @@
                 </div>
                 <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)">
                     <div class="validation-text" *ngIf="nameInput.errors?.required">Please enter name</div>
-                    <div class="validation-text" *ngIf="nameInput.errors?.minlength">Name must be at least
-                        6 characters long</div>
+                    <div class="validation-text" *ngIf="nameInput.errors?.minlength">
+                        Name must be at least 6 characters long
+                    </div>
                 </div>
             </div>
             <label>Password</label>
@@ -29,12 +30,15 @@
                     <div class="validation-text" *ngIf="passwordInput.errors?.required">Please enter
                         password
                     </div>
-                    <div class="validation-text" *ngIf="passwordInput.errors?.minlength">Password must be
-                        at
-                        least 6 characters long</div>
+                    <div class="validation-text" *ngIf="passwordInput.errors?.minlength">
+                        Password must be at least 6 characters long
+                    </div>
                 </div>
             </div>
-                <button class="btn btn-dark btn-md" type="submit" [disabled]="registerForm.invalid">Submit</button>
+            <div class="buttons d-flex justify-content-center">
+                <button type="submit" [disabled]="registerForm.invalid">Submit</button>
+                <a routerLink="/login">Login</a>
+            </div>
         </form>
     </div>
 </div>

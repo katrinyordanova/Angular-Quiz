@@ -12,16 +12,11 @@ img {
     height: 100%;
 }
 
-p {
-    justify-content: center;
-    font-size: 30px;
-    margin-top: 1.1em;
-}
-
 a, 
 a:hover {
     color: rgb(252, 252, 252);
     background-color: rgb(195, 0, 47);
     border: none;
     margin: 1em 0 0 27em;
+    padding: 0.7em
 }

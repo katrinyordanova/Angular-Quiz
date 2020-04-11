@@ -21,6 +21,7 @@ ul {
     margin-right: 0.5em;
     color: rgb(252, 252, 252);
     background-color: rgb(195, 0, 47);
+    padding: 0.7em;
 }
 
 .home-button:hover,

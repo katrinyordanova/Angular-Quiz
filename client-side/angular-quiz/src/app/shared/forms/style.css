@@ -13,9 +13,9 @@
 }
 
 .icons {
-    font-size: 30px;
+    font-size: 37px;
     padding-top: 0.08em;
-    margin: 0 0 0 1.5em;
+    margin: -0.2em 0 0 1em;
 }
 
 label {
@@ -23,16 +23,40 @@ label {
     font-weight: bold;
 }
 
-.btn.btn-dark.btn-md {
-    margin-left: 5.5em;
-    padding: 0.2em 0;
-    width: 50%;
-    font-size: 24px;
+button {
+    margin-bottom: 0.7em;
+    font-size: 21.5px;
 }
 
-button:disabled{
-    color: #000;
-    cursor: default;
+div.buttons.d-flex > button:nth-child(1),
+a {
+    background-color:rgb(205, 24, 64);
+}
+
+div.buttons.d-flex > button:nth-child(1),
+a {
+    margin: 0 0.8em 0.8em 0;
+    padding: 0.5em;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+}
+
+div.buttons.d-flex > button:nth-child(1):disabled {
+    border: none;
+    cursor: not-allowed;
+    background-color:rgb(112, 53, 65);
+
+}
+
+a {
+    height: 2.9em;
+    padding-top: 0.6em;
+    font-size: 21px;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 input {

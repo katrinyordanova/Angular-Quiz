@@ -13,10 +13,6 @@ export class NavigationComponent {
     return this.userService.isLogged;
   }
 
-  // get button() {
-  //   return RegisterComponent.login;
-  // }
-
   constructor(private userService: UserService,
               private router: Router) { }
 
