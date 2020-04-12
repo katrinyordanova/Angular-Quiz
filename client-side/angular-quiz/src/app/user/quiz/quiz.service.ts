@@ -19,7 +19,7 @@ export class QuizService {
     constructor(private http: HttpClient) {}
 
     getUsername() {
-        const user = JSON.parse(localStorage.getItem('current-user'));
+        const user = JSON.parse(localStorage.getItem('user'));
         return user.name;
     }
 
@@ -33,7 +33,7 @@ export class QuizService {
     }
 
     submitScore() {
-        const data = JSON.parse(localStorage.getItem('current-user'));
+        const data = JSON.parse(localStorage.getItem('user'));
         data.score = this.correctAnswers;
         data.timeSpent = this.seconds;
         return this.http.post('http://localhost:8888/api/submited-score', data);

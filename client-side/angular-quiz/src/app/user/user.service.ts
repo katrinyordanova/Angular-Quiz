@@ -8,32 +8,9 @@ import { HttpClient } from '@angular/common/http';
 export class UserService {
   user: IUser;
 
-  currentUser: { name: string; password: string } = null;
-
-  get isLogged() {
-    return !!this.currentUser;
-  }
-
-  constructor(private http: HttpClient) {
-    const currentUser = localStorage.getItem('current-user');
-    this.currentUser = currentUser ? JSON.parse(currentUser): null;
-  }
-
-  register(name: string, password: string) {
-    localStorage.setItem('current-user', JSON.stringify({ name, password }));
-    this.currentUser = { name, password };
-    const body = { name: name, password: password, score: 0, timeSpent: 0 };
-    return this.http.post<IUser>('http://localhost:8888/api/user/register', body);
-  }
-
-  login(name: string, password: string) {
-    localStorage.setItem('current-user', JSON.stringify({ name, password }));
-    this.currentUser = { name, password };
-    return this.http.post<IUser>('http://localhost:8888/api/user/login', { name: name, password: password });
-  }
-
-  logout() {
-    this.currentUser = null;
-    localStorage.removeItem('current-user');
+  constructor(private http: HttpClient) { }
+  
+  getUserData(userId) {
+    return this.http.get(`http://localhost:8888/api/user/${userId}`, { responseType: 'text'});
   }
 }

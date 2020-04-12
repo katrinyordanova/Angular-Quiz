@@ -2,8 +2,10 @@
     <ul ngbNav class="navbar">
         <span class="navbar-brand">Angular Quiz</span>
         <li *ngIf="isLogged" class="nav-buttons">
-            <a (click)="home()" class="home-button btn btn-outline">Home</a> 
-            <a (click)="logout()" class="logout-button btn btn-outline">Log out</a> 
+            <a routerLink="home" class="home-button btn">Home</a> 
+            <a routerLink="home/profile" class="profile-button btn">My profile</a> 
+            <a (click)="logout()" class="logout-button btn">Log out</a> 
         </li>
+        <li *ngIf="!isLogged"><a routerLink="/" class="home-button btn">Home</a></li>        
       </ul>
 </nav>

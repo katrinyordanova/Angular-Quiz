@@ -15,8 +15,7 @@ ul {
     font-size: 35px;
 }
 
-.home-button,
-.logout-button {
+a {
     border: none;
     margin-right: 0.5em;
     color: rgb(252, 252, 252);
@@ -24,8 +23,11 @@ ul {
     padding: 0.7em;
 }
 
-.home-button:hover,
-.logout-button:hover {
+a:hover {
     color: rgb(195, 0, 47);
     background-color: rgb(252, 252, 252);
+}
+
+a.btn:focus {
+    box-shadow: none;
 }

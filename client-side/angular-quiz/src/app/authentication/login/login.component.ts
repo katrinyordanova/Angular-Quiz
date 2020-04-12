@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from 'src/app/user/user.service';
+import { AuthenticationService } from 'src/app/authentication/authentication.service';
 import { Router } from '@angular/router';
 import { faUserAstronaut, faIdCardAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,14 +10,17 @@ import { faUserAstronaut, faIdCardAlt } from '@fortawesome/free-solid-svg-icons'
 })
 export class LoginComponent {
 
-  constructor(private userService: UserService,
+  constructor(private authenticationService: AuthenticationService,
               private route: Router) { }
 
   faUserAstronaut = faUserAstronaut;
   faIdCardAlt = faIdCardAlt;
 
   loginHandler(name: string, password: string) {
-    this.userService.login(name, password);
-    this.route.navigate(['home']);
+    this.authenticationService.login(name, password).subscribe((data: any) => {
+      const userId = data._id
+      localStorage.setItem('user', userId);
+      this.route.navigate(['home']);
+    })
   }
 }

@@ -1,20 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user/user.service';
+import { AuthenticationService } from '../authentication/authentication.service';
 
 @Component({
   selector: 'app-not-found',
   templateUrl: './not-found.component.html',
   styleUrls: ['./not-found.component.css']
 })
-export class NotFoundComponent implements OnInit {
+export class NotFoundComponent {
 
-  constructor(public userService: UserService) { }
+  constructor(public authenticationService: AuthenticationService) { }
 
   get isLogged() {
-    return this.userService.isLogged;
+    return this.authenticationService.isLogged;
   }
-
-  ngOnInit() {
-  }
-
 }

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { UserService } from 'src/app/user/user.service';
+import { AuthenticationService } from 'src/app/authentication/authentication.service';
 import { Router } from '@angular/router';
-import { RegisterComponent } from '../../authentication/register/register.component';
 
 @Component({
   selector: 'app-navigation',
@@ -10,18 +9,14 @@ import { RegisterComponent } from '../../authentication/register/register.compon
 })
 export class NavigationComponent {
   get isLogged() {
-    return this.userService.isLogged;
+    return this.authenticationService.isLogged;
   }
 
-  constructor(private userService: UserService,
+  constructor(private authenticationService: AuthenticationService,
               private router: Router) { }
 
   logout() {
-    this.userService.logout();
+    this.authenticationService.logout();
     this.router.navigate(['']);
-  }
-
-  home() {
-    this.router.navigate(['/home'])
   }
 }

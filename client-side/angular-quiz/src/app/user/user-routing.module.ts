@@ -3,6 +3,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { AuthGuard } from '../auth.guard';
 import { QuizComponent } from './quiz/quiz.component';
 import { ResultComponent } from './result/result.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
     {
@@ -11,13 +12,18 @@ const routes: Routes = [
         canActivate: [AuthGuard],
     },
     {
-        path: 'quiz',
+        path: 'home/quiz',
         component: QuizComponent,
         canActivate: [AuthGuard]
     },
     {
-        path: 'result',
+        path: 'home/result',
         component: ResultComponent,
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'home/profile',
+        component: ProfileComponent,
         canActivate: [AuthGuard]
     }
 ]

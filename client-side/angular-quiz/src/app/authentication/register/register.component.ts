@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from 'src/app/user/user.service';
+import { AuthenticationService } from 'src/app/authentication/authentication.service';
 import { Router } from '@angular/router';
 import { faUserNinja, faUnlock } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,7 +10,7 @@ import { faUserNinja, faUnlock } from '@fortawesome/free-solid-svg-icons';
 })
 export class RegisterComponent {
 
-  constructor(private userService: UserService,
+  constructor(private authenticationService: AuthenticationService,
               private route: Router) {}
   
   loginButton: boolean = false;
@@ -18,10 +18,10 @@ export class RegisterComponent {
   faUserNinja = faUserNinja;
   faUnlock = faUnlock;
 
-  registerHandler(name: string, password: string) {
-    this.userService.register(name, password).subscribe((data: any) => {
+  registerHandler(username: string, password: string) {
+    this.authenticationService.register(username, password).subscribe((data: any) => {
       localStorage.clear();
-      localStorage.setItem('current-user', JSON.stringify(data));
+      localStorage.setItem('user', JSON.stringify(data._id));
       this.route.navigate(['home']);
     });
   }

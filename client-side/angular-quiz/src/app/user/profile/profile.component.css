@@ -1,0 +1,22 @@
+div.container{
+    width: 30em;
+    margin: 3em auto;
+    text-align: center;
+}
+
+div.user-info {
+    background: rgb(195, 0, 47);
+    border-radius: 8px;
+}
+
+a {
+    background: rgb(85, 74, 74);
+    border-radius: 4px;
+    padding: 0.5em;
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+    text-decoration: none;
+}
+

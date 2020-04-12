@@ -38,7 +38,7 @@ export class QuizComponent implements OnInit {
     this.progress += 5;
     if(this.quizService.questionProgress === 20) {
       clearInterval(this.quizService.timer);
-      this.router.navigate(['/result'])
+      this.router.navigate(['/home/result'])
     }
   }
 
