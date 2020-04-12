@@ -4,33 +4,39 @@ const utilities = require('../utilities');
 
 module.exports = {
     get: {
-        allUsers(req, res, next) {
+        many: (req, res, next) => {
             models.user.find()   
             .then((user) => (res.send(user)))
             .catch(next); 
+        },
+        one: (req, res, next) => {
+            const user = req.params.id;
+            models.user.findById(user)
+            .then((userData) => res.send(userData))
+            .catch(next);
         }
     },
 	post: {
         register: (req, res, next) => {
-            const { name, password, score, timeSpent } = req.body;
-            models.user.findOne({ name }).then((user) => {
-                if(user === name) {
+            const { username, password, score, timeSpent } = req.body;
+            models.user.findOne({ username }).then((user) => {
+                if(user === null) {
+                    models.user.create({ username, password, score, timeSpent})
+                        .then((createdUser) => res.send(createdUser))
+                        .catch(next);
+                }else if(user.username === username) {
                     res.status(401).send('User already exists');
-                    console.log('object');
                     return;
                 }
-            });
-            models.user.create({ name, password, score, timeSpent })
-                .then((createdUser) => res.send(createdUser))
-                .catch(next);
+            }).catch(next);
         },
         login: (req, res, next) => {
-            const { name, password } = req.body;
-            models.user.findOne({ name })
+            const { username, password } = req.body;
+            models.user.findOne({ username })
                 .then((user) => !!user ? Promise.all([user, user.matchPassword(password)]) : [null, false])
                 .then(([ user, match ]) => {
                 if(!match) {
-                    res.status(401).send('Invalid name or password');
+                    res.status(401).send('Invalid username or password');
                     return;
                 }
                 const token = utilities.jwt.createToken({ id: user._id });
