@@ -20,8 +20,7 @@ export class RegisterComponent {
 
   registerHandler(username: string, password: string) {
     this.authenticationService.register(username, password).subscribe((data: any) => {
-      localStorage.clear();
-      localStorage.setItem('user', JSON.stringify(data._id));
+      localStorage.setItem('userId', data._id);
       this.route.navigate(['home']);
     });
   }

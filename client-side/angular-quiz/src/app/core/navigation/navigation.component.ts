@@ -17,6 +17,7 @@ export class NavigationComponent {
 
   logout() {
     this.authenticationService.logout();
+    localStorage.clear();
     this.router.navigate(['']);
   }
 }

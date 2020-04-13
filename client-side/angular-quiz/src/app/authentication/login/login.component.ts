@@ -18,8 +18,7 @@ export class LoginComponent {
 
   loginHandler(name: string, password: string) {
     this.authenticationService.login(name, password).subscribe((data: any) => {
-      const userId = data._id
-      localStorage.setItem('user', userId);
+      localStorage.setItem('userId', data._id);
       this.route.navigate(['home']);
     })
   }

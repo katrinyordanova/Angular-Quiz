@@ -8,13 +8,13 @@ const routes: Routes = [
         path: 'register', 
         component: RegisterComponent, 
         // canActivate:[ AuthGuard ], 
-        // data: { isLogged: false } 
+        data: { isLogged: false } 
       },
       { 
         path: 'login', 
         component: LoginComponent, 
         // canActivate: [ AuthGuard ], 
-        // data: { isLogged: false } 
+        data: { isLogged: false } 
       },
 ]
 
