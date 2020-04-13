@@ -36,8 +36,24 @@ a {
     margin: 0 0 1.1em 0.7em;
 }
 
-fa-icon {
+.answers {
+    margin-bottom: 1em;
+}
+
+span.list-group-item {
+    background-color: rgb(195, 0, 47);
     color: rgb(255, 255, 255);
+}
+
+fa-icon {
     font-size: 20px;
     cursor: pointer;
+}
+
+fa-icon.list-icon {
+    color: rgb(195, 0, 47)
+}
+
+li {
+    list-style-type: none;
 }

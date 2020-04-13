@@ -24,7 +24,7 @@ const questionSchema = new mongoose.Schema({
     },
     options: [ optionsSchema ],
     answer: {
-        type: String
+        type: Number
     }
 });
 

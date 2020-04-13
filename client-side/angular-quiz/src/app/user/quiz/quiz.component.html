@@ -11,7 +11,7 @@
     <ng-container
       *ngFor="let option of this.quizService.questions[this.quizService.questionProgress].options;let i = index">
       <li class="list-group-item list-group-item-danger"
-        (click)="userAnswer(quizService.questions[quizService.questionProgress].id,i)">
+        (click)="userAnswers(quizService.questions[quizService.questionProgress].id, i)">
         <fa-icon [icon]="faQuestion"></fa-icon>
         {{option.firstOption}}
         {{option.secondOption}}

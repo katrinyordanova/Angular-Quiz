@@ -12,6 +12,7 @@ export class QuizComponent implements OnInit {
 
   faQuestion = faQuestion;
   progress: number = 5;
+  correctAnswers = [];
 
   constructor(public quizService: QuizService,
               private router: Router) { }
@@ -32,17 +33,13 @@ export class QuizComponent implements OnInit {
     }, 1000);
   }
 
-  userAnswer(id: string, choice: number) {
-    this.quizService.questions[this.quizService.questionProgress].answer = choice;
+  userAnswers(id: string ,choice: number) {
+    this.quizService.questions[this.quizService.questionProgress].userAnswer = choice;
     this.quizService.questionProgress++;
     this.progress += 5;
     if(this.quizService.questionProgress === 20) {
       clearInterval(this.quizService.timer);
       this.router.navigate(['/home/result'])
     }
-  }
-
-  rightAnswers() {
-
   }
 }

@@ -5,12 +5,26 @@
       <img src="../../../assets/images/trophy.jpg" alt="quiz-completed-trophy">
     </div>
     <div class="quiz-content">
-      <h4>Congratulations {{quizService.getUsername()}}!</h4>
+      <h4>Congratulations!</h4>
       <h3>Your score is: {{quizService.correctAnswers}}/20</h3>
       <h3>Time Elapsed : {{quizService.elapsedTime()}}</h3>
-      <!-- <h5>Submit you score to us!</h5>
-      <button class="btn" (click)="onSubmit()">Submit</button> -->
-      <h3>Want to try again?<a class="btn btn-danger" (click)="restartQuiz()"><fa-icon [icon]="faUndoAlt"></fa-icon></a></h3>
+      <h3>Want to try again?<a class="btn btn-danger" routerLink="/home/quiz"><fa-icon [icon]="faUndoAlt"></fa-icon></a></h3>
     </div>
   </div>
-</div>
+  <div class="questions-and-answers">
+  <h3>Questions with correct answer</h3>
+  <div class="answers" *ngFor="let question of quizService.questions; let i = index">
+    <span class="list-group-item list-group-item-action">{{i+1}}.{{question.question}}</span>
+        <div *ngFor="let option of question.options; let j = index">
+              <li class="list-group-item list-group-item">
+                <div *ngFor="let item of option | keyvalue">
+                  <!-- <span class="badge red-text" *ngIf="question.userAnswer !== j && question.answer !== j && question.userAnswer === 0">Incorrect</span>
+                  <span class="badge red-text" *ngIf="question.answer === 0">Incorrect</span> -->
+                  <fa-icon class="list-icon" [icon]="faList"></fa-icon><a>{{item.value}}</a>
+                  <span class="badge" *ngIf="question.answer === j"><fa-icon [icon]="faCheck"></fa-icon></span>
+                </div>
+              </li>
+          </div>
+        </div>
+    </div>
+  </div>

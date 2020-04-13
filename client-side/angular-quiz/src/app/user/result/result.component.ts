@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../quiz/quiz.service';
 import { Router } from '@angular/router';
-import { faUndoAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUndoAlt, faList, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-result',
@@ -11,29 +11,24 @@ import { faUndoAlt } from '@fortawesome/free-solid-svg-icons';
 export class ResultComponent implements OnInit {
 
   faUndoAlt = faUndoAlt;
+  faList = faList;
+  faCheck = faCheck;
+  correctAnswers: any[];
 
   constructor(public quizService: QuizService, private router: Router) { }
 
   ngOnInit() {
-    // this.quizService.getRightAnswers().subscribe((data: any) => {
-    //   this.quizService.correctAnswers = 0;
-    //   this.quizService.questions.forEach((element, index) => {
-    //     if(element.answer === data[index]) {
-    //       this.quizService.correctAnswers++;
-    //       element.correct = data[index];
-    //     }
-    //   });
-    // });
-  }
-
-  onSubmit() {
-    this.quizService.submitScore().subscribe(() => {
-
+    this.quizService.correctAnswers = 0;
+    this.quizService.questions.forEach((element, index) => {
+      if(element.answer === element.userAnswer) {
+        this.quizService.correctAnswers++;
+      }
     });
   }
 
-  restartQuiz() {
-    this.router.navigate(['/quiz'])
-  }
+  // onSubmit() {
+  //   this.quizService.submitScore().subscribe(() => {
 
+  //   });
+  // }
 }
