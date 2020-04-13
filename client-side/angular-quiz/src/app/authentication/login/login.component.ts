@@ -13,13 +13,19 @@ export class LoginComponent {
   constructor(private authenticationService: AuthenticationService,
               private route: Router) { }
 
+  loginError: boolean = false;
   faUserAstronaut = faUserAstronaut;
   faIdCardAlt = faIdCardAlt;
 
-  loginHandler(name: string, password: string) {
-    this.authenticationService.login(name, password).subscribe((data: any) => {
+  loginHandler(username: string, password: string) {
+    this.authenticationService.login(username, password).subscribe((data: any) => {
+      this.authenticationService.currentUser = { username };
+      localStorage.setItem('username', username);
       localStorage.setItem('userId', data._id);
       this.route.navigate(['home']);
-    })
+    },
+    (error) => {
+      this.loginError = true;
+    });
   }
 }

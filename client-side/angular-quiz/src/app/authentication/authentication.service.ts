@@ -25,9 +25,7 @@ export class AuthenticationService {
   }
 
   login(username: string, password: string) {
-    this.currentUser = { username };
-    localStorage.setItem('username', username);
-    const body = { username: username, password: password, score: 0, timeSpent: 0 };
+    const body = { username: username, password: password };
     return this.http.post<IUser>('http://localhost:8888/api/user/login', body);
   }
 
@@ -35,6 +33,4 @@ export class AuthenticationService {
     this.currentUser = null;
     localStorage.removeItem('user');
   }
-
-  
 }

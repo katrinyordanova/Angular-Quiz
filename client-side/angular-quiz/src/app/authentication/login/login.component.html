@@ -32,6 +32,9 @@
                     <div class="validation-text" *ngIf="passwordInput.errors?.minlength">Password must be
                         at least 6 characters long</div>
                 </div>
+                <div class="validation-text" *ngIf="this.loginError">
+                    Username or password is incorrect
+                </div>
             </div>
             <div class="buttons d-flex justify-content-center">
                 <button type="submit" [disabled]="loginForm.invalid">Submit</button>
