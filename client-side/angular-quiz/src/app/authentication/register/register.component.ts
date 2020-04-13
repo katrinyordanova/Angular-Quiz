@@ -13,15 +13,19 @@ export class RegisterComponent {
   constructor(private authenticationService: AuthenticationService,
               private route: Router) {}
   
-  loginButton: boolean = false;
-
+  registerError: boolean = false;
   faUserNinja = faUserNinja;
   faUnlock = faUnlock;
 
   registerHandler(username: string, password: string) {
     this.authenticationService.register(username, password).subscribe((data: any) => {
+      this.authenticationService.currentUser = { username };
+      localStorage.setItem('username', username);
       localStorage.setItem('userId', data._id);
       this.route.navigate(['home']);
+    },
+    (error) => {
+      this.registerError = true;
     });
   }
 }

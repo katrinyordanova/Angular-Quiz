@@ -34,6 +34,9 @@
                         Password must be at least 6 characters long
                     </div>
                 </div>
+                <div class="validation-text" *ngIf="this.registerError">
+                    Username is already taken
+                </div>
             </div>
             <div class="buttons d-flex justify-content-center">
                 <button type="submit" [disabled]="registerForm.invalid">Submit</button>
