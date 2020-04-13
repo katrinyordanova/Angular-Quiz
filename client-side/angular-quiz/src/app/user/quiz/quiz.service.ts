@@ -23,7 +23,6 @@ export class QuizService {
     }
 
     userAnswers() {
-        console.log(this.questions);
         const body = this.questions.map(a => a.answer);
         return this.http.post('http://localhost:8888/api/answers', body);
     }

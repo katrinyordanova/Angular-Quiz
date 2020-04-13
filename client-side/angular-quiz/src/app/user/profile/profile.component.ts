@@ -9,18 +9,25 @@ import { UserService } from '../user.service';
 export class ProfileComponent implements OnInit {
   username: string;
   score: number;
-  timeSpent: number;
+  timeSpent: string;
 
   constructor(public userService: UserService) { }
 
   ngOnInit() {
-    const userId = localStorage.getItem('user');
+    const userId = localStorage.getItem('userId');
     this.userService.getUserData(userId).subscribe((data: any) => {
       const userData = JSON.parse(data);
       const values = Object.values(userData);
       this.username = values[1].toString();
       this.score = Number(values[3]);
-      this.timeSpent = Number(values[4]);
+      const minutes = Number(values[4]) % 10;
+      const seconds = Number(values[4]) / 10;
+      this.timeSpent = `${minutes}:${seconds}`;
     });
+  }
+
+  submitScore() {
+    const userId = localStorage.getItem('userId');
+    this.userService.submitUserQuizData(userId, this.username, this.score, this.timeSpent);
   }
 }

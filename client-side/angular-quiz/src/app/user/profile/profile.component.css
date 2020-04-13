@@ -9,6 +9,11 @@ div.user-info {
     border-radius: 8px;
 }
 
+button {
+    background: rgb(195, 0, 47);
+    color: rgb(255, 255, 255);
+}
+
 a {
     background: rgb(85, 74, 74);
     border-radius: 4px;

@@ -2,11 +2,14 @@
     <div class="user-info">
         <h1>My Profile</h1>
         <p>I am {{username}}</p>
-        <p>Quiz core: {{score}}</p>
-        <p>Time spent on quiz: {{timeSpent}}</p>
+        <p>Last quiz score: {{score}}</p>
+        <p>Time spent on last quiz: {{timeSpent}} minutes</p>
+    </div>
+    <div>
+        <button class="btn" (click)="submitScore()">Submit</button>
     </div>
     <a routerLink="/home">Go home</a>
     <!-- <p>quizzes completed</p>
     <p>total time spent solving quizzes</p>
     <p>total score from solved quizzes</p> -->
-</div><!-- <a routerLink="/home/edit-profile"></a> -->
+</div>
