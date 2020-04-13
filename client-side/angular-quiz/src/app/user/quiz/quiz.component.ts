@@ -18,24 +18,39 @@ export class QuizComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
-    this.quizService.seconds = 0;
-    this.quizService.questionProgress = 0;
+    if(parseInt(localStorage.getItem('seconds'))) {
+      this.quizService.seconds = parseInt(localStorage.getItem('seconds'));
+      this.quizService.questionProgress = parseInt(localStorage.getItem('questionProgress'));
+      this.quizService.questions = JSON.parse(localStorage.getItem('questions'));
 
-    this.quizService.getQuiz().subscribe((data: any) => {
-      this.quizService.questions = JSON.parse(data);
-      this.startTimer();
-    })
+      if(this.quizService.questionProgress === 20) {
+        this.router.navigate(['/home/result']);
+      }else {
+        this.startTimer();
+      }
+    }else {
+      this.quizService.seconds = 0;
+      this.quizService.questionProgress = 0;
+
+      this.quizService.getQuiz().subscribe((data: any) => {
+        this.quizService.questions = JSON.parse(data);
+        this.startTimer();
+      });
+    }
   }
 
   startTimer() {
     this.quizService.timer = setInterval(() => {
       this.quizService.seconds++;
+      localStorage.setItem('seconds', this.quizService.seconds.toString());
     }, 1000);
   }
 
   userAnswers(id: string ,choice: number) {
     this.quizService.questions[this.quizService.questionProgress].userAnswer = choice;
+    localStorage.setItem('questions', JSON.stringify(this.quizService.questions));
     this.quizService.questionProgress++;
+    localStorage.setItem('questionProgress', this.quizService.questionProgress.toString());
     this.progress += 5;
     if(this.quizService.questionProgress === 20) {
       clearInterval(this.quizService.timer);

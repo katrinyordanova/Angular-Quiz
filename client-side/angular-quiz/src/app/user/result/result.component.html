@@ -8,7 +8,7 @@
       <h4>Congratulations!</h4>
       <h3>Your score is: {{quizService.correctAnswers}}/20</h3>
       <h3>Time Elapsed : {{quizService.elapsedTime()}}</h3>
-      <h3>Want to try again?<a class="btn btn-danger" routerLink="/home/quiz"><fa-icon [icon]="faUndoAlt"></fa-icon></a></h3>
+      <h3>Want to try again?<a class="btn btn-danger" (click)="restartQuiz()"><fa-icon [icon]="faUndoAlt"></fa-icon></a></h3>
     </div>
   </div>
   <div class="questions-and-answers">
