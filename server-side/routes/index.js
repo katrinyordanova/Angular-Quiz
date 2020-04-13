@@ -4,6 +4,7 @@ const result = require('./result');
 const profile = require('./profile');
 const questions = require('./questions');
 const answer = require('./answer');
+const score = require('./score');
 
 module.exports = {
     user,
@@ -11,5 +12,6 @@ module.exports = {
     result,
     profile,
     questions,
-    answer
+    answer,
+    score
 }

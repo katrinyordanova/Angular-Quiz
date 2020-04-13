@@ -38,11 +38,11 @@ module.exports = {
                 if(!match) {
                     res.status(401).send('Invalid username or password');
                     return;
-                }
+                }else {
                 const token = utilities.jwt.createToken({ id: user._id });
                 res.cookie(config.authCookieName, token).send(user);
-            })
-            .catch(next);
+                }
+            }).catch(next);
         },
         logout: (req, res, next) => {
             const token = req.cookies[config.authCookieName];
@@ -51,6 +51,15 @@ module.exports = {
                     res.clearCookie(config.authCookieName).send('Logged out!');
                 })
             .catch(next);
+        }
+    },
+    put: {
+        updateData: (req, res, next) => {
+            const { userId, score, timeSpent } = req.body;
+            models.user.updateOne({ _id: userId }, { score, timeSpent })
+            .then((updatedUserData) =>{
+                res.send(updatedUserData)
+            }).catch(next);
         }
     }
 }
