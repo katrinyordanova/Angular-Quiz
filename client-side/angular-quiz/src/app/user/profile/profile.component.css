@@ -5,8 +5,19 @@ div.container{
 }
 
 div.user-info {
+    margin-bottom: 1.3em;
+    height: 13.5em;
     background: rgb(195, 0, 47);
     border-radius: 8px;
+}
+
+h1 {
+    margin-top:0.5em;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 25px;
 }
 
 button {
@@ -19,6 +30,7 @@ a {
     border-radius: 4px;
     padding: 0.5em;
     color: rgb(255, 255, 255);
+    font-size: 20px;
 }
 
 a:hover {

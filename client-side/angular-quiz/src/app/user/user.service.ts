@@ -21,6 +21,6 @@ export class UserService {
 
   submitUserQuizData(userId: string, username: string, score: number, timeSpent: string) {
     const body = { userId: userId, username: username, score: score, timeSpent: timeSpent };
-    return this.http.post(`http://localhost:8888/api/score/submit`, body);
+    return this.http.post(`http://localhost:8888/api/scores`, body);
   }
 }

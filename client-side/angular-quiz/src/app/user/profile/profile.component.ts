@@ -22,7 +22,8 @@ export class ProfileComponent implements OnInit {
       this.score = Number(values[3]);
       const minutes = Number(values[4]) % 10;
       const seconds = Number(values[4]) / 10;
-      this.timeSpent = `${minutes}:${seconds}`;
+      const secondsValue = seconds.toString().substr(0, seconds.toString().length - 2);
+      this.timeSpent = `${minutes}:${secondsValue}`;
     });
   }
 
