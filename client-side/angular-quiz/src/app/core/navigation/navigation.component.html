@@ -4,6 +4,7 @@
         <li *ngIf="isLogged" class="nav-buttons">
             <a routerLink="home" class="home-button btn">Home</a> 
             <a routerLink="home/profile" class="profile-button btn">My profile</a> 
+            <a routerLink="home/leaderboard" class="leaderboard-button btn">Leaderboard</a> 
             <a (click)="logout()" class="logout-button btn">Log out</a> 
         </li>
         <li *ngIf="!isLogged"><a routerLink="/" class="home-button btn">Home</a></li>        

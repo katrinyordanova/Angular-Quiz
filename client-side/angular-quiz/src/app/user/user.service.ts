@@ -10,6 +10,10 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
   
+  getAllUsers() {
+    return this.http.get(`http://localhost:8888/api/user/users`, { responseType: 'text'}); 
+  }
+
   getUserData(userId) {
     return this.http.get(`http://localhost:8888/api/user/${userId}`, { responseType: 'text'});
   }

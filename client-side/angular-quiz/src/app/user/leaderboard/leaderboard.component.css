@@ -1,0 +1,20 @@
+.container {
+    text-align: center;  
+} 
+
+h1 {
+    margin-bottom: -0.1em;
+    text-decoration: underline;
+}
+
+div.data {
+    margin: 0 auto 0.5em auto;
+    background: rgb(195, 0, 47);
+    width: 20em;
+    border-radius: 5px;
+    padding: 0.4em 0.3em 0 0.4em;
+}
+
+h4 {
+    margin-bottom: -0.1em;
+}

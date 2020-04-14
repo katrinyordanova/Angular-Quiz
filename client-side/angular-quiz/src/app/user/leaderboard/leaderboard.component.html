@@ -1,0 +1,8 @@
+<div class="container">
+    <h1>LeaderBoard</h1>
+    <div *ngFor="let data of info" class="data justify-content-center">
+        <div *ngFor="let d of data | keyvalue">
+            <h4>{{d.key}} : <b>{{d.value}}</b></h4>
+        </div>
+    </div>
+</div>

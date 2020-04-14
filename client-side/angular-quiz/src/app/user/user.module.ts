@@ -7,9 +7,10 @@ import { QuizComponent } from './quiz/quiz.component';
 import { ResultComponent } from './result/result.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProfileComponent } from './profile/profile.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 @NgModule({
-  declarations: [HomepageComponent, QuizComponent, ResultComponent, ProfileComponent],
+  declarations: [HomepageComponent, QuizComponent, ResultComponent, ProfileComponent, LeaderboardComponent],
   imports: [
     CommonModule,
     FontAwesomeModule,
