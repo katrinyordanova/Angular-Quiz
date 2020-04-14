@@ -1,15 +1,19 @@
 .container {
-    margin: 1.35em auto;
+    margin: 4em auto;
+    border: 1px solid rgb(7, 14, 13);
+    padding-bottom: 0.4em;
 }
 
-.header h2 {
-    width: 5em;
-    margin-top: 3.8em;
+h2 {
+    text-align: center;
+    margin-top: 0.7em;
 }
 
-img {
+/* img {
     margin-top: 1em;
     margin-left: -4em;
     width: 20em;
     height: 100%;
-}
+    background-image: url("../../../assets/images/bg.jpg");
+    opacity: 0.3;
+} */

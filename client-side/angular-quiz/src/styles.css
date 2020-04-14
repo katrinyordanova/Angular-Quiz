@@ -9,10 +9,10 @@
     box-sizing: inherit;
 }
 
-/* html, body {
+html, body {
     background-image: url("./assets/images/bg.jpg");
-
-} */
+    background-repeat: no;
+}
 
 html {
     box-sizing: border-box;

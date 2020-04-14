@@ -11,6 +11,7 @@ img {
     width: 25em;
     height: 22em;
     margin: -2em 0 0 -2em;
+    mix-blend-mode: multiply;
 }
 
 .quiz-result {

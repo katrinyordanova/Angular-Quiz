@@ -1,9 +1,16 @@
-.header h2 {
-    margin-top: 5.2em;
+.container {
+    margin: 4em auto;
+    border: 1px solid rgb(7, 14, 13);
+    padding-bottom: 0.4em;
 }
 
-img {
+h2 {
+    text-align: center;
+    margin-top: 0.7em;
+}
+
+/* img {
     margin: 0.5em 0 0 0em;
     width: 12em;
     height: 100%;
-}
+} */

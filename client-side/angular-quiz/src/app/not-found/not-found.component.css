@@ -10,6 +10,7 @@ img {
     margin: auto;
     width: 30em;
     height: 100%;
+    mix-blend-mode: multiply;
 }
 
 a, 

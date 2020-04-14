@@ -11,8 +11,7 @@ export class AuthenticationService {
   currentUser: { username: string } = null;
 
   get isLogged() {
-    // return !!this.currentUser;
-    return true;
+    return !!this.currentUser;
   }
 
   constructor(private http: HttpClient) {

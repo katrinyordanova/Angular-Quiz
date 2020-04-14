@@ -9,10 +9,14 @@ ul {
 }
 
 .navbar-brand {
-    margin: 0.2em auto;
+    margin: 0 auto;
     padding: 0;
     color: rgb(252, 252, 252);
     font-size: 35px;
+}
+
+.isLogged.navbar-brand {
+    margin-left: 18em;
 }
 
 a {

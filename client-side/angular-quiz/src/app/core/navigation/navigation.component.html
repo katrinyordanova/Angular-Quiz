@@ -1,6 +1,9 @@
 <nav>
     <ul ngbNav class="navbar">
-        <span class="navbar-brand">Angular Quiz</span>
+        <template *ngIf="!isLogged">
+            <span class="navbar-brand">Angular Quiz</span>
+        </template>
+        <span class="isLogged navbar-brand">Angular Quiz</span>
         <li *ngIf="isLogged" class="nav-buttons">
             <a routerLink="home" class="home-button btn">Home</a> 
             <a routerLink="home/profile" class="profile-button btn">My profile</a> 

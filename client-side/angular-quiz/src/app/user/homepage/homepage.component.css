@@ -6,6 +6,11 @@
     padding-bottom: 0;
 }
 
+div > ul > li {
+    background-image: url("../../../assets/images/bg.jpg");
+
+}
+
 a:link {
     text-decoration: none;
 }
@@ -20,6 +25,7 @@ a.btn:hover {
     color: rgb(195, 0, 47);
     border: 1px solid rgb(195, 0, 47);
     background-color: rgb(252, 252, 252);
+    background-image: url("../../../assets/images/bg.jpg");
 }
 
 a:focus {
